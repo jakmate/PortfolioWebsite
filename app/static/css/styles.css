@@ -1,0 +1,81 @@
+body {
+    padding-top: 0;
+}
+
+h1 {
+    color: #fff;
+}
+
+footer {
+    color: #888787;
+    background-color: #3e3542;
+    padding: 20px 0;
+}
+
+.footer-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.navbar-custom {
+    transition: top 0.3s;
+    background-color: #3e3542;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-nav .nav-link {
+    color: #fff;
+}
+
+.nav-link.active {
+    font-weight: bold;
+    color: #a6ac51 !important;
+}
+
+
+#home,
+#aboutMe,
+#projects,
+#contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0;
+    height: 100vh;
+    text-align: center;
+}
+
+#home {
+    padding-top: 0;
+    text-align: center;
+}
+
+#aboutMe,
+#projects,
+#contact {
+    padding-top: 50px;
+    height: 100vh;
+    color: #fff;
+}
+
+#aboutMe {
+    background-color: #654f8a;
+}
+
+#projects {
+    background-color: #4d3d66;
+}
+
+#contact {
+    background-color: #654f8a;
+}
+
+textarea.form-control {
+    resize: both;
+}
+
+#name,
+#email #message {
+    color: black;
+}
