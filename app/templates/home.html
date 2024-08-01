@@ -12,12 +12,12 @@
 
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
 
-    <div id="home" class="container-fluid">
+    <section id="home" class="container-fluid">
         <h1>Hi, I'm
             <span style="color: #a6ac51">Jakub Orzolek</span>.
         </h1>
         <h1>CS student at University of Leeds</h1>
-    </div>
+    </section>
 
     <nav class="navbar navbar-expand-lg navbar-custom">
         <div class="container-fluid">
@@ -32,17 +32,45 @@
         </div>
     </nav>
 
-    <div id="aboutMe" class="container-fluid">
+    <section id="aboutMe" class="container-fluid text-center">
         <h2>About Me</h2>
-        <p>Bla Bla Bla</p>
-    </div>
+    </section>
 
-    <div id="projects" class="container-fluid">
+    <section id="projects" class="container-fluid">
         <h2>Projects</h2>
-        <p>Here are my projects</p>
-    </div>
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <div class="col-md-4">
+                    <div class="disContainer">
+                        <img src="{{ url_for('static', filename='images/weatherApp.png') }}" class="disImage">
+                        <div class="overlay">
+                            <div class="overlay-content">
+                                <div class="disText">Weather App</div>
+                                <div class="disText" style="color: #654f8a">Python</div>
+                                <a class="disButton" href="https://github.com/jakmate/WeatherApp" target="_blank"
+                                    rel="noopener noreferrer">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="disContainer">
+                        <img src="{{ url_for('static', filename='images/tttMinimax.png') }}" class="disImage">
+                        <div class="overlay">
+                            <div class="overlay-content">
+                                <div class="disText">Tic Tac Toe Minimax</div>
+                                <div class="disText" style="color: #654f8a">Python</div>
+                                <a class="disButton" href="https://github.com/jakmate/TicTacToeMinimax" target="_blank"
+                                    rel="noopener noreferrer">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div id="contact" class="container-fluid">
+    <section id="contact" class="container-fluid">
         <h2>Contact</h2>
         <form action="">
             <div class="row mb-3">
@@ -57,7 +85,8 @@
             </div>
             <div class="row mb-3">
                 <div class="col">
-                    <textarea type="text" class="form-control" id="message" rows="4" placeholder="Enter message"></textarea>
+                    <textarea type="text" class="form-control" id="message" rows="4"
+                        placeholder="Enter message"></textarea>
                 </div>
             </div>
             <div class="row mb-3">
@@ -66,7 +95,7 @@
                 </div>
             </div>
         </form>
-    </div>    
+    </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.net.min.js"></script>
@@ -82,11 +111,13 @@
         </p>
         <a class="p-2" href="https://www.linkedin.com/in/jakub-orzolek-2a8315237/" target="_blank"
             rel="noopener noreferrer">
-            <div><img src="{{ url_for('static', filename='images/linkedin.png') }}" alt="LinkedIn" class="footer-icon"></img>
+            <div><img src="{{ url_for('static', filename='images/linkedin.png') }}" alt="LinkedIn"
+                    class="footer-icon"></img>
             </div>
         </a>
         <a class="p-2" href="https://github.com/jakmate" target="_blank" rel="noopener noreferrer">
-            <div><img src="{{ url_for('static', filename='images/github.png') }}" alt="GitHub" class="footer-icon"></img></div>
+            <div><img src="{{ url_for('static', filename='images/github.png') }}" alt="GitHub"
+                    class="footer-icon"></img></div>
         </a>
     </div>
 </footer>

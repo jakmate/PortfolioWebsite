@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const sections = document.querySelectorAll("div[id]");
+    const sections = document.querySelectorAll("section[id]");
     const navLinks = document.querySelectorAll(".nav-link");
-    const navBrands = document.querySelectorAll(".navbar-brand");
 
     window.addEventListener("scroll", () => {
         let current = "";
