@@ -10,11 +10,31 @@ footer {
     color: #888787;
     background-color: #3e3542;
     padding: 20px 0;
+    position: relative;
 }
 
 .footer-icon {
     width: 24px;
     height: 24px;
+}
+
+.footer-btt-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.btt-icon {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #a6ac51;
+    padding: 5px;
+    transition: background-color 0.3s;
+}
+
+.btt-icon:hover {
+    background-color: #858a41;
 }
 
 .navbar-custom {
@@ -32,13 +52,16 @@ footer {
     color: #a6ac51 !important;
 }
 
+#home {
+    justify-content: center;
+}
+
 #home,
 #aboutMe,
 #projects,
 #contact {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     height: 100vh;
     text-align: center;
@@ -135,4 +158,21 @@ textarea.form-control {
 
 .disButton:hover {
     background-color: #543c7a;
+}
+
+h2 {
+    position: relative;
+    margin-top: 0;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 2%;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 33%;
+    height: 2px;
+    background-color: #fff;
+    margin: 10px auto 0;
 }
