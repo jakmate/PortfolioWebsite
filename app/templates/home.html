@@ -35,7 +35,24 @@
 
     <section id="aboutMe" class="container-fluid text-center">
         <h2>About Me</h2>
+        <div class="row align-items-center">
+            <!-- Text on the left -->
+            <div class="col-md-8">
+                <p class="about-text">
+                    I love solving complex problems, learning new languages, and building innovative projects that can 
+                    make a difference. Whether it's Python, C++, or exploring new frameworks, I am driven by a deep 
+                    curiosity and enthusiasm for the world of coding.
+                    <br><br>
+                    In my free time, I'm a sports enthusiast, whether it's football, F1, or any other sport.
+                </p>
+            </div>
+            <!-- Photo on the right -->
+            <div class="col-md-4">
+                <img src="{{ url_for('static', filename='images/profile.jpg') }}" class="img-fluid about-image" alt="Jakub Orzolek">
+            </div>
+        </div>
     </section>
+    
 
     <section id="projects" class="container-fluid">
         <h2>Projects</h2>
@@ -43,13 +60,26 @@
             <div class="row justify-content-md-center">
                 <div class="col-md-4">
                     <div class="disContainer">
+                        <img src="{{ url_for('static', filename='images/weatherApp.png') }}" class="disImage">
+                        <div class="overlay">
+                            <div class="overlay-content">
+                                <div class="disText">Weather App</div>
+                                <div class="disText" style="color: #654f8a">Python</div>
+                                <a class="disButton" href="https://github.com/jakmate/WeatherApp" target="_blank"
+                                    rel="noopener noreferrer">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="disContainer">
                         <img src="{{ url_for('static', filename='images/sudokuSolver.png') }}" class="disImage">
                         <div class="overlay">
                             <div class="overlay-content">
                                 <div class="disText">Sudoku Solver</div>
                                 <div class="disText" style="color: #654f8a">C++</div>
-                                <a class="disButton" href="https://github.com/jakmate/SudokuSolverBacktracking" target="_blank"
-                                    rel="noopener noreferrer">Learn More</a>
+                                <a class="disButton" href="https://github.com/jakmate/SudokuSolverBacktracking"
+                                    target="_blank" rel="noopener noreferrer">Learn More</a>
                             </div>
                         </div>
                     </div>
@@ -67,22 +97,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="disContainer">
-                        <img src="{{ url_for('static', filename='images/weatherApp.png') }}" class="disImage">
-                        <div class="overlay">
-                            <div class="overlay-content">
-                                <div class="disText">Weather App</div>
-                                <div class="disText" style="color: #654f8a">Python</div>
-                                <a class="disButton" href="https://github.com/jakmate/WeatherApp" target="_blank"
-                                    rel="noopener noreferrer">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
-    </section>
+    </section>    
 
     <section id="contact" class="container-fluid">
         <h2>Contact</h2>
@@ -131,7 +148,7 @@
             <p class="p-2 m-0">Jakub Orzolek
                 <span style="color: #d6da1a">©2024</span>
             </p>
-            <a class="p-2" href="https://www.linkedin.com/in/jakub-orzolek-2a8315237/" target="_blank"
+            <a class="p-2" href="https://www.linkedin.com/in/jakub-orzolek/" target="_blank"
                 rel="noopener noreferrer">
                 <div><img src="{{ url_for('static', filename='images/linkedin.png') }}" alt="LinkedIn"
                         class="footer-icon"></img>

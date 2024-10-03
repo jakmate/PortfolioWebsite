@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     padding-top: 0;
 }
@@ -13,6 +14,7 @@ footer {
     position: relative;
 }
 
+/* Footer Icons */
 .footer-icon {
     width: 24px;
     height: 24px;
@@ -37,6 +39,7 @@ footer {
     background-color: #858a41;
 }
 
+/* Navbar Styles */
 .navbar-custom {
     transition: top 0.3s;
     background-color: #3e3542;
@@ -52,8 +55,10 @@ footer {
     color: #a6ac51 !important;
 }
 
+/* Section Styles */
 #home {
     justify-content: center;
+    height: 100vh;
 }
 
 #home,
@@ -63,27 +68,44 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
     text-align: center;
-    padding-top: 0;
+    padding: 50px 0; /* Add padding to the top and bottom */
 }
 
 #aboutMe,
 #projects,
 #contact {
-    padding-top: 50px;
+    height: auto; /* Changed from 100vh to auto */
     color: #fff;
 }
 
+/* About Section */
 #aboutMe,
 #contact {
     background-color: #654f8a;
 }
 
-#projects {
-    background-color: #4d3d66;
+.about-image {
+    max-width: 50%; /* Limit size of the About image to 50% */
+    height: auto; /* Maintain aspect ratio */
 }
 
+/* Centering About Text */
+.about-text {
+    margin-left: 25%; /* Adjust the left margin */
+    text-align: center; /* Center the text */
+}
+
+/* Projects Section */
+#projects {
+    background-color: #4d3d66;
+    padding: 50px 0; /* Add padding for projects section */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content in projects section */
+}
+
+/* Form Control Styles */
 textarea.form-control {
     resize: both;
 }
@@ -94,10 +116,12 @@ textarea.form-control {
     color: black;
 }
 
+/* Image Container Styles */
 .disContainer {
     position: relative;
     width: 100%;
     padding-top: 100%;
+    margin-bottom: 20px; /* Add margin to separate project images */
 }
 
 .disImage {
@@ -109,6 +133,7 @@ textarea.form-control {
     object-fit: cover;
 }
 
+/* Overlay Styles */
 .overlay {
     position: absolute;
     top: 0;
@@ -160,6 +185,7 @@ textarea.form-control {
     background-color: #543c7a;
 }
 
+/* Heading Styles */
 h2 {
     position: relative;
     margin-top: 0;
@@ -175,4 +201,21 @@ h2::after {
     height: 2px;
     background-color: #fff;
     margin: 10px auto 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .disContainer {
+        width: 100%;
+        padding-top: 75%; /* Maintain aspect ratio for smaller devices */
+    }
+
+    .about-image {
+        max-width: 100%; /* Adjust About image for smaller screens */
+    }
+
+    .about-text {
+        margin-left: 0; /* Remove left margin on smaller screens */
+        padding: 0 10px; /* Add horizontal padding for better readability */
+    }
 }
