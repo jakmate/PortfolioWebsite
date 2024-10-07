@@ -7,6 +7,25 @@ h1 {
     color: #fff;
 }
 
+/* Heading Styles */
+h2 {
+    position: relative;
+    margin-top: 0;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 2%;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 33%;
+    height: 2px;
+    background-color: #fff;
+    margin: 10px auto 0;
+}
+
+/* Footer Styles */
 footer {
     color: #888787;
     background-color: #3e3542;
@@ -25,6 +44,7 @@ footer {
     height: 30px;
 }
 
+/* Back to Top Button Icon */
 .btt-icon {
     position: absolute;
     top: -15px;
@@ -56,11 +76,6 @@ footer {
 }
 
 /* Section Styles */
-#home {
-    justify-content: center;
-    height: 100vh;
-}
-
 #home,
 #aboutMe,
 #projects,
@@ -70,6 +85,11 @@ footer {
     align-items: center;
     text-align: center;
     padding: 50px 0; /* Add padding to the top and bottom */
+}
+
+#home {
+    justify-content: center;
+    height: 100vh;
 }
 
 #aboutMe,
@@ -105,32 +125,55 @@ footer {
     align-items: center; /* Center content in projects section */
 }
 
-/* Form Control Styles */
-textarea.form-control {
-    resize: both;
-}
-
-#name,
-#email,
-#message {
-    color: black;
+/* Grid Container */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between grid items */
+    width: 100%; /* Full width for the grid */
 }
 
 /* Image Container Styles */
-.disContainer {
+.projectContainer {
     position: relative;
-    width: 100%;
-    padding-top: 100%;
-    margin-bottom: 20px; /* Add margin to separate project images */
+    padding-top: 75%; /* Maintain aspect ratio for all images */
+    overflow: hidden; /* Ensure any overflow is hidden */
 }
 
-.disImage {
+.projectContainer:hover .overlay {
+    opacity: 1;
+}
+
+.projectImage {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.projectText {
+    color: white;
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+.projectButton {
+    display: block;
+    background-color: #654f8a;
+    color: white;
+    font-size: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.projectButton:hover {
+    background-color: #543c7a;
 }
 
 /* Overlay Styles */
@@ -150,10 +193,6 @@ textarea.form-control {
     align-items: center;
 }
 
-.disContainer:hover .overlay {
-    opacity: 1;
-}
-
 .overlay-content {
     display: flex;
     flex-direction: column;
@@ -162,54 +201,19 @@ textarea.form-control {
     text-align: center;
 }
 
-.disText {
-    color: white;
-    font-size: 20px;
-    margin: 5px 0;
+/* Form Control Styles */
+textarea.form-control {
+    resize: both;
 }
 
-.disButton {
-    display: block;
-    background-color: #654f8a;
-    color: white;
-    font-size: 20px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s;
-    margin-top: 10px;
-}
-
-.disButton:hover {
-    background-color: #543c7a;
-}
-
-/* Heading Styles */
-h2 {
-    position: relative;
-    margin-top: 0;
-    text-align: center;
-    width: 100%;
-    padding-bottom: 2%;
-}
-
-h2::after {
-    content: '';
-    display: block;
-    width: 33%;
-    height: 2px;
-    background-color: #fff;
-    margin: 10px auto 0;
+#name,
+#email,
+#message {
+    color: black;
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    .disContainer {
-        width: 100%;
-        padding-top: 75%; /* Maintain aspect ratio for smaller devices */
-    }
-
     .about-image {
         max-width: 100%; /* Adjust About image for smaller screens */
     }

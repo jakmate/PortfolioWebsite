@@ -53,53 +53,69 @@
         </div>
     </section>
     
-
     <section id="projects" class="container-fluid">
         <h2>Projects</h2>
         <div class="container">
-            <div class="row justify-content-md-center">
-                <div class="col-md-4">
-                    <div class="disContainer">
-                        <img src="{{ url_for('static', filename='images/weatherApp.png') }}" class="disImage">
-                        <div class="overlay">
-                            <div class="overlay-content">
-                                <div class="disText">Weather App</div>
-                                <div class="disText" style="color: #654f8a">Python</div>
-                                <a class="disButton" href="https://github.com/jakmate/WeatherApp" target="_blank"
-                                    rel="noopener noreferrer">Learn More</a>
-                            </div>
+            <div class="grid-container">
+                <div class="projectContainer">
+                    <img src="{{ url_for('static', filename='images/algVis.png') }}" class="projectImage" alt="Algorithm Visualizer">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <div class="projectText">Algorithm Visualizer</div>
+                            <div class="projectText" style="color: #654f8a">JavaScript</div>
+                            <a class="projectButton" href="https://github.com/jakmate/AlgorithmVisualizer" target="_blank"
+                                rel="noopener noreferrer">Learn More</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="disContainer">
-                        <img src="{{ url_for('static', filename='images/sudokuSolver.png') }}" class="disImage">
-                        <div class="overlay">
-                            <div class="overlay-content">
-                                <div class="disText">Sudoku Solver</div>
-                                <div class="disText" style="color: #654f8a">C++</div>
-                                <a class="disButton" href="https://github.com/jakmate/SudokuSolverBacktracking"
-                                    target="_blank" rel="noopener noreferrer">Learn More</a>
-                            </div>
+                <div class="projectContainer">
+                    <img src="{{ url_for('static', filename='images/weatherApp.png') }}" class="projectImage" alt="Weather App">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <div class="projectText">Weather App</div>
+                            <div class="projectText" style="color: #654f8a">Python</div>
+                            <a class="projectButton" href="https://github.com/jakmate/WeatherApp" target="_blank"
+                                rel="noopener noreferrer">Learn More</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="disContainer">
-                        <img src="{{ url_for('static', filename='images/tttMinimax.png') }}" class="disImage">
-                        <div class="overlay">
-                            <div class="overlay-content">
-                                <div class="disText">Tic Tac Toe Minimax</div>
-                                <div class="disText" style="color: #654f8a">Python</div>
-                                <a class="disButton" href="https://github.com/jakmate/TicTacToeMinimax" target="_blank"
-                                    rel="noopener noreferrer">Learn More</a>
-                            </div>
+                <div class="projectContainer">
+                    <img src="{{ url_for('static', filename='images/titanic.png') }}" class="projectImage" alt="Titanic Machine Learning">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <div class="projectText">Titanic Machine Learning</div>
+                            <div class="projectText" style="color: #654f8a">Python</div>
+                            <a class="projectButton" href="https://www.kaggle.com/code/jakuborzolek/titanic-test" target="_blank"
+                                rel="noopener noreferrer">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="projectContainer">
+                    <img src="{{ url_for('static', filename='images/sudokuSolver.png') }}" class="projectImage" alt="Sudoku Solver">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <div class="projectText">Sudoku Solver</div>
+                            <div class="projectText" style="color: #654f8a">C++</div>
+                            <a class="projectButton" href="https://github.com/jakmate/SudokuSolverBacktracking"
+                                target="_blank" rel="noopener noreferrer">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="projectContainer">
+                    <img src="{{ url_for('static', filename='images/tttMinimax.png') }}" class="projectImage" alt="Tic Tac Toe Minimax">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <div class="projectText">Tic Tac Toe Minimax</div>
+                            <div class="projectText" style="color: #654f8a">Python</div>
+                            <a class="projectButton" href="https://github.com/jakmate/TicTacToeMinimax" target="_blank"
+                                rel="noopener noreferrer">Learn More</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>    
+    </section>
+       
 
     <section id="contact" class="container-fluid">
         <h2>Contact</h2>
