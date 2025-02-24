@@ -40,10 +40,11 @@
             <div class="col-md-8">
                 <p class="about-text">
                     I love solving complex problems, learning new languages, and building innovative projects that can 
-                    make a difference. Whether it's Python, C++, or exploring new frameworks, I am driven by a deep 
+                    make a difference. Whether it's Python, C, or exploring new frameworks, I am driven by a deep 
                     curiosity and enthusiasm for the world of coding.
                     <br><br>
-                    In my free time, I'm a sports enthusiast, whether it's football, F1, or any other sport.
+                    In my free time, I'm a sports enthusiast, whether it's football, F1, or any other sport. I also
+                    love playing instruments such as the guitar and piano, and I'm always keen on a new book to read.
                 </p>
             </div>
             <!-- Photo on the right -->
@@ -74,8 +75,7 @@
                         <div class="overlay-content">
                             <div class="projectText">GPS Journey Tracker</div>
                             <div class="projectText" style="color: #cab1f1">Python/JavaScript</div>
-                            <a class="projectButton" href="https://github.com/uol-feps-soc-comp2913-2324s2-classroom/team-project-team-17" target="_blank"
-                                rel="noopener noreferrer">Learn More</a>
+                            <a class="projectButton" href="#" data-bs-toggle="modal" data-bs-target="#blockedModal">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -169,11 +169,31 @@
         </form>
     </section>
 
+    <!-- Bootstrap Modal for GPS Journey Tracker -->
+    <div class="modal fade" id="blockedModal" tabindex="-1" aria-labelledby="blockedModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="blockedModalLabel">Access Blocked</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            The code is only accessable with university account.
+            Can request for code copy through email.
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.net.min.js"></script>
     <script src="{{ url_for('static', filename='js/scroll.js') }}"></script>
     <script src="{{ url_for('static', filename='js/vanta.js') }}"></script>
     <script src="{{ url_for('static', filename='js/activeTab.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <footer>
         <div class="d-flex justify-content-center align-items-center">
