@@ -8,8 +8,8 @@ document.addEventListener("DOMContentLoaded", function() {
         minWidth: 200.00,
         scale: 1.00,
         scaleMobile: 1.00,
-        color: 0xadbbda,
-        backgroundColor: 0x3d52a0,
+        color: 0xCCD6F6,
+        backgroundColor: 0x10284c,
         points: 12.00,
         maxDistance: 20.00
     });

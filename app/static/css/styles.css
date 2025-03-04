@@ -1,19 +1,26 @@
-/* General Styles */
+:root {
+    --primary-dark: #0A192F;
+    --secondary-blue: #10284c;
+    --accent-pink: #FF69B4;
+    --hover-pink: #b54575;
+    --dark-text: #CCD6F6;
+    --light-text: #FFFFFF;
+}
+
 body {
-    padding-top: 0;
+    padding-top: 0
 }
 
 h1 {
-    color: #fff;
+    color: var(--light-text)
 }
 
-/* Heading Styles */
 h2 {
     position: relative;
     margin-top: 0;
     text-align: center;
     width: 100%;
-    padding-bottom: 2%;
+    padding-bottom: 2%
 }
 
 h2::after {
@@ -21,101 +28,166 @@ h2::after {
     display: block;
     width: 33%;
     height: 2px;
-    background-color: #fff;
-    margin: 10px auto 0;
+    background-color: var(--light-text);
+    margin: 10px auto 0
 }
 
-/* Navbar Styles */
+.nav-box-container {
+    gap: 20px
+}
+
+.nav-box {
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: 8px;
+    transition: all .3s ease;
+    padding: 0 15px;
+    margin: 0 5px
+}
+
+.nav-box:hover {
+    background-color: rgba(202, 177, 241, .3);
+    transform: translateY(-2px)
+}
+
+.nav-box .nav-link {
+    color: var(--light-text) !important;
+    padding: 10px 20px
+}
+
 .navbar-custom {
-    transition: top 0.3s;
-    background-color: #526dd0;
+    transition: top .3s;
+    background-color: var(--primary-dark)
 }
 
-.navbar-custom .navbar-brand,
 .navbar-custom .navbar-nav .nav-link {
-    color: #fff;
+    color: var(--light-text)
 }
 
-.nav-link.active {
-    font-weight: bold;
-    color: #f1eff5 !important;
-}
-
-/* Section Styles */
-#home,
 #aboutMe,
-#projects,
-#contact {
+#contact,
+#home,
+#projects {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 50px 0; /* Add padding to the top and bottom */
+    padding: 50px 0
 }
 
 #home {
     justify-content: center;
-    height: 100vh;
+    height: 100vh
 }
 
 #aboutMe,
-#projects,
-#contact {
+#contact,
+#projects {
     height: auto;
-    color: #fff;
+    color: var(--light-text)
 }
 
-/* About Section */
 #aboutMe,
 #contact {
-    background-color: #5f7eed;
+    background-color: var(--secondary-blue)
+}
+
+#aboutMe {
+    min-height: 100vh;
+    padding: 5rem 0
+}
+
+.about-text {
+    line-height: 1.8
 }
 
 .about-image {
-    max-width: 50%; /* Limit size of the About image to 50% */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 50%;
+    height: auto;
+    border-radius: 10px
+}
+
+.icon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+    gap: 1.5rem;
+    max-width: 600px
+}
+
+.icon-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background: rgba(255, 255, 255, .1);
     border-radius: 10px;
+    transition: transform .3s ease
 }
 
-/* Centering About Text */
-.about-text {
-    margin-left: 25%; /* Adjust the left margin */
-    text-align: center;
+.icon-item:hover {
+    transform: translateY(-5px);
+    background: rgba(202, 177, 241, .3)
 }
 
-/* Projects Section */
+.icon-item i {
+    font-size: 2.5rem;
+    color: var(--accent-pink);
+    transition: all .3s ease
+}
+
+.icon-item:hover i {
+    color: var(--light-text);
+    transform: scale(1.2)
+}
+
+.icon-item img {
+    width: 40px;
+    height: 40px;
+    filter: invert(58%) sepia(49%) saturate(1200%) hue-rotate(285deg) brightness(95%) contrast(101%);
+    transition: all 0.3s ease;
+}
+
+.icon-item:hover img {
+    filter: brightness(0) invert(1);
+    transform: scale(1.2);
+}
+
+.devicon-flask-plain:before {
+    content: "\f0c3";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900
+}
+
 #projects {
-    background-color: #526dd0;
-    padding: 50px 15px; /* Add padding for better spacing */
+    background-color: var(--primary-dark);
+    padding: 50px 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: white;
+    color: var(--light-text)
 }
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
-    gap: 30px; /* Add consistent spacing between cards */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
     width: 100%;
-    max-width: 1200px; /* Restrict grid width for better alignment */
-    padding: 20px; /* Padding around the grid */
+    max-width: 1200px;
+    padding: 20px
 }
 
-/* Project Card */
 .projectContainer {
     position: relative;
-    width: 100%; /* Take full width of grid cell */
-    aspect-ratio: 4/3; /* Maintain a consistent aspect ratio */
+    width: 100%;
+    aspect-ratio: 4/3;
     overflow: hidden;
-    border-radius: 10px; /* Add rounded corners for a modern look */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .2);
+    transition: transform .3s ease, box-shadow .3s ease
 }
 
 .projectContainer:hover {
-    transform: scale(1.05); /* Slightly enlarge on hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Enhance shadow on hover */
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .4)
 }
 
 .projectImage {
@@ -124,81 +196,76 @@ h2::after {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensure the image covers the container without distortion */
-    border-radius: 10px; /* Match container's rounded corners */
+    object-fit: cover;
+    border-radius: 10px
 }
 
 .projectContainer:hover .overlay {
-    opacity: 1; /* Show overlay on hover */
+    opacity: 1
 }
 
 .projectText {
     font-size: 18px;
-    margin: 0;
+    margin: 0
 }
 
 .projectButton {
-    background-color: #5c77be;
-    color: white;
+    background-color: var(--secondary-blue);
+    color: var(--light-text);
     font-size: 16px;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     text-decoration: none;
-    transition: background-color 0.3s ease;
+    transition: background-color .3s ease
 }
 
 .projectButton:hover {
-    background-color: #cab1f1;
+    background-color: var(--accent-pink)
 }
 
-/* Overlay */
 .overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(14, 23, 46, 0.9); /* Semi-transparent overlay */
+    background-color: rgba(14, 23, 46, .9);
     opacity: 0;
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity .3s ease-in-out;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    border-radius: 10px; /* Match container's rounded corners */
+    border-radius: 10px
 }
 
-/* Overlay Content */
 .overlay-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 20px
 }
 
-/* Form Control Styles */
 textarea.form-control {
-    resize: both;
+    resize: both
 }
 
-#name,
 #email,
-#message {
-    color: black;
+#message,
+#name {
+    color: #000
 }
 
-/* Footer Styles */
 footer {
-    color: white;
-    background-color: #526dd0;
+    color: var(--light-text);
+    background-color: var(--primary-dark);
     padding: 20px 0;
-    position: relative;
+    position: relative
 }
 
-/* Footer Icons */
 .footer-icon {
     width: 24px;
     height: 24px;
@@ -206,43 +273,116 @@ footer {
 
 .footer-btt-icon {
     width: 30px;
-    height: 30px;
+    height: 30px
 }
 
-/* Back to Top Button Icon */
 .btt-icon {
     position: absolute;
     top: -15px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #cab1f1;
+    background-color: var(--accent-pink);
     padding: 5px;
-    transition: background-color 0.3s;
+    transition: background-color .3s
 }
 
 .btt-icon:hover {
-    background-color: #7d6f97;
+    background-color: var(--hover-pink)
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
+.accent-text {
+    color: var(--accent-pink);
+}
+
+.projectButton {
+    background-color: var(--accent-pink) !important;
+    transition: all 0.3s ease;
+}
+
+.projectButton:hover {
+    background-color: var(--hover-pink) !important;
+}
+
+.btn-primary {
+    background-color: var(--accent-pink);
+    border-color: var(--accent-pink);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--hover-pink);
+    border-color: var(--hover-pink);
+}
+
+[data-animate] {
+    opacity: 0;
+    transition: all 1.0s ease-out;
+    will-change: transform, opacity;
+}
+
+[data-animate="left"] {
+    transform: translateX(-60px);
+}
+
+[data-animate="right"] {
+    transform: translateX(60px);
+}
+
+[data-animate].animated {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+[data-animate="fade"] {
+    transform: translateY(40px);
+}
+
+[data-animate="fade"].animated {
+    transform: translateY(0);
+}
+
+@media (min-width:992px) {
+    .navbar-expand-lg .navbar-collapse {
+        justify-content: center
+    }
+
+    #aboutMe {
+        padding: 3rem 0
+    }
+
+    .about-image {
+        max-width: 300px !important;
+        margin-bottom: 2rem
+    }
+}
+
+@media (max-width:768px) {
     .grid-container {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust grid for smaller screens */
-        gap: 20px; /* Reduce spacing for smaller screens */
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px
     }
 
     .projectText {
-        font-size: 16px; /* Adjust text size for smaller screens */
+        font-size: 16px
     }
 
     .projectButton {
-        font-size: 14px; /* Adjust button size for smaller screens */
-        padding: 8px 16px; /* Adjust padding */
+        font-size: 14px;
+        padding: 8px 16px
+    }
+
+    .icon-grid {
+        grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+        gap: 1rem
+    }
+
+    .icon-item i {
+        font-size: 1.75em
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width:480px) {
     .projectContainer {
-        aspect-ratio: 3/2; /* Adjust aspect ratio for very small screens */
+        aspect-ratio: 3/2
     }
 }
