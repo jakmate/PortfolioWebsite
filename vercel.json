@@ -1,19 +1,32 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "run.py",
-        "use": "@vercel/python",
-        "config": {
-          "maxLambdaSize": "15mb"
-        }
+  "version": 2,
+  "builds": [
+    {
+      "src": "run.py",
+      "use": "@vercel/python",
+      "config": {
+        "maxLambdaSize": "15mb",
+        "includeFiles": [
+          "app/**",
+          "config.py",
+          "requirements.txt"
+        ]
       }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "run.py"
-      }
-    ]
+    }
+  ],
+  "routes": [
+    {
+      "src": "/static/(.*)",
+      "dest": "app/static/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "run.py"
+    }
+  ],
+  "github": {
+    "enabled": true,
+    "autoAlias": false,
+    "autoDeploy": false
   }
-  
+}

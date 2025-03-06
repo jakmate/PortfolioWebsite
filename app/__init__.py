@@ -12,4 +12,4 @@ csrf = CSRFProtect(app)
 
 app.app_context().push()
 
-from app import views
+from app import views  # noqa: F401 E402

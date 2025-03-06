@@ -4,7 +4,7 @@
     --accent-pink: #FF69B4;
     --hover-pink: #b54575;
     --dark-text: #CCD6F6;
-    --light-text: #FFFFFF;
+    --light-text: #FFF;
 }
 
 body {
@@ -37,7 +37,7 @@ h2::after {
 }
 
 .nav-box {
-    background-color: rgba(255, 255, 255, .1);
+    background-color: #ffffff1a;
     border-radius: 8px;
     transition: all .3s ease;
     padding: 0 15px;
@@ -45,7 +45,7 @@ h2::after {
 }
 
 .nav-box:hover {
-    background-color: rgba(202, 177, 241, .3);
+    background-color: #cab1f14d;
     transform: translateY(-2px)
 }
 
@@ -63,7 +63,7 @@ h2::after {
     color: var(--light-text)
 }
 
-#aboutMe,
+#about-me,
 #contact,
 #home,
 #projects {
@@ -79,19 +79,19 @@ h2::after {
     height: 100vh
 }
 
-#aboutMe,
+#about-me,
 #contact,
 #projects {
     height: auto;
     color: var(--light-text)
 }
 
-#aboutMe,
+#about-me,
 #contact {
     background-color: var(--secondary-blue)
 }
 
-#aboutMe {
+#about-me {
     min-height: 100vh;
     padding: 5rem 0
 }
@@ -118,14 +118,14 @@ h2::after {
     justify-content: center;
     align-items: center;
     padding: 1rem;
-    background: rgba(255, 255, 255, .1);
+    background: #ffffff1a;
     border-radius: 10px;
     transition: transform .3s ease
 }
 
 .icon-item:hover {
     transform: translateY(-5px);
-    background: rgba(202, 177, 241, .3)
+    background: #cab1f14d
 }
 
 .icon-item i {
@@ -151,10 +151,35 @@ h2::after {
     transform: scale(1.2);
 }
 
-.devicon-flask-plain:before {
+.devicon-flask-plain::before {
     content: "\f0c3";
-    font-family: "Font Awesome 5 Free";
+    font-family: sans-serif;
     font-weight: 900
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0e172ee6;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px
+}
+
+.overlay-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px
 }
 
 #projects {
@@ -175,22 +200,22 @@ h2::after {
     padding: 20px
 }
 
-.projectContainer {
+.project-container {
     position: relative;
     width: 100%;
     aspect-ratio: 4/3;
     overflow: hidden;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, .2);
+    box-shadow: 0 4px 8px #0003;
     transition: transform .3s ease, box-shadow .3s ease
 }
 
-.projectContainer:hover {
+.project-container:hover {
     transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, .4)
+    box-shadow: 0 6px 12px #0006
 }
 
-.projectImage {
+.project-image {
     position: absolute;
     top: 0;
     left: 0;
@@ -200,53 +225,28 @@ h2::after {
     border-radius: 10px
 }
 
-.projectContainer:hover .overlay {
+.project-container:hover .overlay {
     opacity: 1
 }
 
-.projectText {
+.project-text {
     font-size: 18px;
     margin: 0
 }
 
-.projectButton {
-    background-color: var(--secondary-blue);
+.project-button {
+    background-color: var(--accent-pink) !important;
     color: var(--light-text);
     font-size: 16px;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     text-decoration: none;
-    transition: background-color .3s ease
+    transition: all .3s ease
 }
 
-.projectButton:hover {
-    background-color: var(--accent-pink)
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(14, 23, 46, .9);
-    opacity: 0;
-    transition: opacity .3s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border-radius: 10px
-}
-
-.overlay-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px
+.project-button:hover {
+    background-color: var(--hover-pink) !important;
 }
 
 textarea.form-control {
@@ -294,15 +294,6 @@ footer {
     color: var(--accent-pink);
 }
 
-.projectButton {
-    background-color: var(--accent-pink) !important;
-    transition: all 0.3s ease;
-}
-
-.projectButton:hover {
-    background-color: var(--hover-pink) !important;
-}
-
 .btn-primary {
     background-color: var(--accent-pink);
     border-color: var(--accent-pink);
@@ -341,12 +332,12 @@ footer {
     transform: translateY(0);
 }
 
-@media (min-width:992px) {
+@media (width >= 992px) {
     .navbar-expand-lg .navbar-collapse {
         justify-content: center
     }
 
-    #aboutMe {
+    #about-me {
         padding: 3rem 0
     }
 
@@ -356,17 +347,17 @@ footer {
     }
 }
 
-@media (max-width:768px) {
+@media (width <= 768px) {
     .grid-container {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
         gap: 20px
     }
 
-    .projectText {
+    .project-text {
         font-size: 16px
     }
 
-    .projectButton {
+    .project-button {
         font-size: 14px;
         padding: 8px 16px
     }
@@ -381,8 +372,8 @@ footer {
     }
 }
 
-@media (max-width:480px) {
-    .projectContainer {
+@media (width <= 480px) {
+    .project-container {
         aspect-ratio: 3/2
     }
 }
