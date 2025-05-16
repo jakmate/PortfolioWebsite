@@ -44,6 +44,11 @@ h2::after {
     margin: 0 5px
 }
 
+.nav-box.active {
+    background-color: var(--hover-pink);
+    transform: translateY(-2px);
+}
+
 .nav-box:hover {
     background-color: #cab1f14d;
     transform: translateY(-2px)
@@ -103,7 +108,7 @@ h2::after {
 .about-image {
     max-width: 50%;
     height: auto;
-    border-radius: 10px
+    border-radius: 10px;
 }
 
 .icon-grid {
@@ -120,12 +125,14 @@ h2::after {
     padding: 1rem;
     background: #ffffff1a;
     border-radius: 10px;
-    transition: transform .3s ease
+    box-shadow: 0 4px 8px var(--accent-pink);
+    transition: transform .3s ease, box-shadow .3s ease;
 }
 
 .icon-item:hover {
     transform: translateY(-5px);
-    background: #cab1f14d
+    background: #cab1f14d;
+    box-shadow: 0 6px 12px #ff69b44d;
 }
 
 .icon-item i {
@@ -206,13 +213,13 @@ h2::after {
     aspect-ratio: 4/3;
     overflow: hidden;
     border-radius: 10px;
-    box-shadow: 0 4px 8px #0003;
+    box-shadow: 0 4px 8px var(--accent-pink);
     transition: transform .3s ease, box-shadow .3s ease
 }
 
 .project-container:hover {
     transform: scale(1.05);
-    box-shadow: 0 6px 12px #0006
+    box-shadow: 0 6px 12px #ff69b44d;
 }
 
 .project-image {
@@ -221,7 +228,7 @@ h2::after {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 10px
 }
 
