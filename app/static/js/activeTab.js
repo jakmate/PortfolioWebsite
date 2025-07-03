@@ -1,25 +1,28 @@
 document.addEventListener("DOMContentLoaded", function() {
     const sections = document.querySelectorAll("section[id]");
     const navLinks = document.querySelectorAll(".nav-link");
-
-    window.addEventListener("scroll", () => {
+    
+    function updateActiveNav() {
         let current = "";
-        const navbarHeight = document.querySelector('.navbar').offsetHeight;
-
+        const scrollPos = window.pageYOffset + 100;
+        
         sections.forEach(section => {
-            const sectionTop = section.offsetTop - navbarHeight;
-            const sectionHeight = section.clientHeight;
-            if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
-                current = section.getAttribute("id");
+            const top = section.offsetTop;
+            const height = section.offsetHeight;
+            
+            if (scrollPos >= top && scrollPos < top + height) {
+                current = section.id;
             }
         });
-
-        navLinks.forEach(navLink => {
-            const navBox = navLink.closest('.nav-box');
-            navBox.classList.remove("active");
-            if (navLink.getAttribute("href").includes(current)) {
-                navBox.classList.add("active");
+        
+        navLinks.forEach(link => {
+            link.classList.remove("active");
+            if (link.getAttribute("href").includes(current)) {
+                link.classList.add("active");
             }
         });
-    });
+    }
+    
+    window.addEventListener("scroll", updateActiveNav);
+    updateActiveNav();
 });

@@ -1,4 +1,8 @@
 .env
+.dockerignore
 .gitignore
+.venv
+Dockerfile
 README.md
-__pycache__/
+__pycache__
+vercel.json

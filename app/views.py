@@ -8,7 +8,7 @@ import threading
 @app.route("/", methods=["GET", "POST"])
 def home():
     form = Form()
-    return render_template("home.html", title="Home", form=form)
+    return render_template("home.html", title="Jakub Orzolek", form=form)
 
 
 @app.route("/sendMessage", methods=["POST"])
@@ -32,4 +32,7 @@ def sendMessage():
 
 def send_async_email(app, msg):
     with app.app_context():
-        mail.send(msg)
+        try:
+            mail.send(msg)
+        except Exception as e:
+            app.logger.error(f"Email sending failed: {str(e)}")
